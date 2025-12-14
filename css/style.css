@@ -1,0 +1,129 @@
+html, body{
+    overflow-x: hidden;
+}
+
+.navbar{
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    background: rgba(4, 59, 78, 0.444);
+    backdrop-filter: blur(6px);
+    text-align: center;
+}
+
+.navbar.nav{
+    margin: auto;
+    text-align: center;
+}
+
+.my-navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background:  rgba(4, 59, 78, 0.444);
+    backdrop-filter: blur(6px);
+    text-align: center;
+}
+
+.font_type{
+    font-size: large;
+    font-family: Gill Sans, sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 2px rgb(10, 74, 70);
+}
+.font_type:hover{
+    font-size: large;
+    font-family: Gill Sans, sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 2px rgb(81, 203, 195);
+}
+
+
+body{
+    padding-top: 80px;
+}
+
+.title_font{
+    font-family: DejaVu Sans Mono, monospace; /* from this web-page https://www.w3.org/Style/Examples/007/fonts.ru.html */ 
+}
+
+.text-primary{
+    color:rgb(6, 120, 133) !important;
+}
+
+.product-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0, 0, 0.12);
+}
+
+.card-img-top{
+    height: 160px;
+    object-fit: cover;
+}
+
+.add_product{
+    background-color: #1a92a5 !important; /* using !important was necessary to override other conflicting CSS rules*/
+    color: white;
+    border: 1px solid #1a92a5 !important;
+}
+
+.add_product:not(.added):hover{
+    background-color: #084a55 !important;
+    color: white;
+}
+
+.add_product.added{
+    background-color: transparent !important;
+    color: #125653;
+    border: 1px solid #125653 !important;
+}
+
+.add_product.added:hover{
+    background-color: transparent;
+    color: #125653;
+    border: 1px solid #125653 !important;
+}
+
+.cart-item-row{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.modal-body{
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.price-tag{
+    font-weight: 600;
+}
+
+.quote-bg{
+    background: linear-gradient(90deg, #6eb2bad3, #eef8ff);
+    border-radius: 5vh;
+}
+
+footer .bi{
+    color: #0d6efd;
+}
+
+@media (min-width:1200px){
+    .card-col{
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 992px) and (max-width:1199px){
+    .card-col{
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 575px){
+    .card-img-top {
+        height: 130px;
+    }
+}

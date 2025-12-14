@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--for looking good on all devices-->
+        <meta name="author" content="Drobca Tatiana" />
+        <meta name="description" content="Veterinary Donation Shop" > 
+        <title>VetHelp</title>
+        <link rel="icon" href="img/pagelogo.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" > <!-- after some recomendations i used this veb page https://getbootstrap.com/ to import packages  for bootstrap -->
+        <link rel="stylesheet" href="css/style.css" >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.4/font/bootstrap-icons.css" > <!-- the same one for icons http://icons.getbootstrap.com/ -->
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-light sticky-top shadow-sm">
+                <div class="container"> <!--basic bootstrap container that centes content-->
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#burger_nav"
+                     aria-controls="burger_nav" aria-expanded="false" aria-label="Toggle navigation"> <!-- youtube tutorial https://youtu.be/zIUfMhplaZU?si=u91RXe6u7r4nbA2h-->
+                     <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="burger_nav">
+                        <ul class="navbar-nav ms-auto align-items-lg-center">
+                            <li class="nav-item"><a class="nav-link font_type" href="#top">Home</a></li>
+                            <li class="nav-item"><a class="nav-link font_type" href="#about">About Fund</a></li>
+                            <li class="nav-item"><a class="nav-link font_type" href="#gallery">Product Gallery</a></li>
+                            <li class="nav-item"><a class="nav-link font_type" href="#footer">Contact</a></li>
+                        </ul>
+                    </div>
+                    <button id="open_cart" class="btn btn-outline-primary ms-2 position-relative" aria-label="Open cart">
+                        <i class="bi bi-cart4"></i> <!--imported from https://icons.getbootstrap.com/-->
+                        <span id="num_p_cart" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="mt-4">
+            <div id="top" class="container text-center">
+                <h1 class="display-5 fw-bold title_font" >Veterinary Donation Shop</h1>
+            </div>
+
+            <section id="about" class="container my-5">
+                <div class="row align-items-lg-center gy-4">
+                    <div class="col-lg-6">
+                        <h2>Information</h2>
+                        <h5 class="text-primary">Animal Rescue Veterinary Fund</h5>
+                    <p>Provides financial aid for pet owners or rescue groups needing funds for animal medical care, aiming to prevent abandonment by covering costs for treatments, surgeries, or emergency care.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="img/logo.png" alt="vet clinic" class="img-fluid rounded shadow-sm" style="max-height: 320px; object-fit: cover;">
+                </div>
+                </div>
+            </section>
+
+            <section id="gallery" class="container my-4">
+                <div class="d-flex justify-content-between align-items-end mb-3">
+                    <div>
+                        <h2>Product Gallery</h2>
+                        <p class="text-muted mb-0">Choose servise or items to donate - add them to ypur cart</p>
+                    </div>
+                </div>
+                <div id="product_gallary" class="row gx-3 gy-4"></div>
+            </section>
+
+           <section class="container my-5">
+            <div class="p-4 rounded-3 text-center quote-bg">
+                <blockquote class="blockquote mb-0"> <!--https://www.w3schools.com/tags/tag_blockquote.asp-->
+                    <p class="fs-5">“We have to speak up for those who cannot speak for themselves.” — Peter Singer</p>
+                </blockquote>
+            </div>
+           </section>
+        </main>
+        <!--I Hate this footer-->
+        <footer id="footer" class="bg-light pt-4">
+            <div class="container">
+                <div class="row gy-3">
+                    <div class="col-12 col-md-4 d-flex justify-content-center ">
+                        <div class="contacts-inner text-start"> <!--tanks to one more div everythin is ok% the goal was to center the box but not the text-->
+                        <h5 class="text-center">Contacts</h5>
+                        <p class="mb-0">Email: family.vet881@gmail.com</p>
+                        <p class="mb-0">Phone: +37369717881 </p>
+                        <p class="mb-0">Adress: Șos. Muncești 94, Chișinău</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 text-center">
+                        <h5>Follow us</h5>
+                        <a class="me-2" href="https://www.instagram.com/family_vett/?igsh=mtntdnm4a241cgfknw%3D%3D#" target="_blank"><i class="bi bi-instagram fs-4"> Instagramm</i></a>
+                        <br>
+                        <a class="me-2" href="https://www.facebook.com/clinicaveterinara.md" target="_blank"><i class="bi bi-facebook fs-4"> Facebook</i></a>
+                    </div>
+                    <div class="col-12 col-md-4 text-center text-md-end">
+                        <img src="img/vetcenter.webp" alt="vet clinic" class="img-fluid rounded" style="max-width: 140px;">
+                        <p class="mt-2 mb-0 small text-muted">Our partner clinic</p>
+                    </div>
+                </div>
+                <div class="text-center small text-muted mt-3">© 2025 VetHelp - Drobca Tatiana's project</div>
+            </div>
+        </footer>
+
+        <div class="modal fade" id="shopping_cart" tabindex="-1" aria-hidden="true"> <!--https://getbootstrap.com/docs/4.0/components/modal/-->
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="cart_head" class="modal-title">Your Cart</h5>
+                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="cart_body" class="modal-body"></div>
+                    <div id="cart_footer" class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> <!-- after some recomendations i used this veb page https://www.jsdelivr.com/package/npm/bootstrap to import packages  for bootstrap -->
+<script src="js/scripts.js"></script>
+    </body>
+</html>
+
+<!-- bootstraps for me
+for header https://getbootstrap.com/docs/5.3/components/navbar/ :
+ navbar - nav container
+ navbar-expand-lg -  for burger menu on small screens
+ navbar-light - light color
+ shadow-sm - small ahadow under nav
+ sticky-top - kips the nav fixwd in top (it doesn't work why?) !css helps
+ navbar-toggler - burger-menu
+ navbar-togler-icon - icon in three lines
+ data-bs-toggle="colapse" - for JS to open and close (thanks to https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js)
+ navbar-nav - container foe nav links
+ ms-auto - pushes nav to the right
+ align-items-lg-center - centers items on large screens
+ nav-item - wrapper for nav item 
+ nav-link - style for nav link
+for cart:
+ btn - basic bootestrap button slyle
+ btn-outline-primary - button with blue outline style
+ ms-2 - adds left margin
+ badge - smal lable for cart 
+ rounded-pill - rounded icon
+ bg-danger - red color
+ position-absolute - positions cart relative to the main content
+ top-0 - aligns element to the top 
+ start-100 - moves element to rifht side
+ translate-middle - centers elements
+for text: 
+ display-5 - text size
+ fw-bold - makes text bold
+ text-center - centers text
+ text-primary - text with primary blue collor
+ text-muted - light-gray text color
+ small - smaller font size
+for main part and gallary:
+ container - centers content 
+ row - horisontal layout row
+ col-lg-6 - adaptation for columns on screens
+ gy-4, gx-3 - vertical spasing and horisontal spacing
+ d-flex - flexbox
+ justify-content-between - space between items
+ align-items-end - align items to bottom
+ mb-3 - adds bottom margin 
+for logo img:
+ img-fluid - makes img responsive
+ rounded - rounded coners
+for rooter:
+ bg-light -light background
+ pt-4 - padding on top 
+ mt-3 - matgin on top
+ mb-0 - removes bottom margin 
+for hidden box with cart https://getbootstrap.com/docs/5.3/components/modal/:
+ modal - creates modal window
+ fade - open/close animation 
+ modal-xl - large modal sise
+ modal-dialog-centered - the content in center
+ modal-header, modal-body, modal-footer - body content of cart, botton and tob section for cart
+for bootstrap icons: 
+ bi - class for bootstrap icons
+ bi-cart4 - cart icon 
+ bi-facebook - facebook icon
+ bi-instagram - inst icon 
+-->
