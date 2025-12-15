@@ -4,11 +4,11 @@
 const products = [
     {id:1, title:"Surgical Operation Support", price:150, short:"Contribution to surgey fund", img:"img/operation.jpg"},
     {id:2, title:"Animal X-Ray", price:40, short:"Diagnostic radiography", img:"img/x-ray.jpg"},
-    {id:3, title:"Sterilization Support", price:80, short:"Partial sterilization cost", img:"img/sterilization.PNG"},
-    {id:4, title:"Blood Test", price:28, short:"Basic blood analysis", img:"img/bloodtest.PNG"},
+    {id:3, title:"Sterilization Support", price:80, short:"Partial sterilization cost", img:"img/sterilization.png"},
+    {id:4, title:"Blood Test", price:28, short:"Basic blood analysis", img:"img/bloodtest.png"},
     {id:5, title:"Ultrasound Examination", price:45, short:"Ultrasound diagnostics", img:"img/usi.jpg"},
     
-    {id:6, title:"Medication (Antibiotics)", price:25, short:"Antibiotics course", img:"img/antibiotics.PNG"},
+    {id:6, title:"Medication (Antibiotics)", price:25, short:"Antibiotics course", img:"img/antibiotics.png"},
     {id:7, title:"Anti-Parasite Treatment", price:30, short:"Flea/tick/deworming", img:"img/anti-parasite.webp"},
     {id:8, title:"Vaccination", price:35, short:"Basic vaccine dose", img:"img/vaccination.jpg"},
     {id:9, title:"Antiseptics & Bandage Materials", price:8, short:"Wound care supplies", img:"img/antiseptics.png"},
@@ -49,7 +49,7 @@ function add_card(){
         col.className = 'col-6 col-sm-6 col-md-4 col-lg-3 card-col d-flex';
         col.innerHTML = `
           <div class="card product-card w-100"> 
-             <img src="${p.img}" class="card_img_top" alt="${p.title}">
+             <img src="${p.img}" class="card-img-top" alt="${p.title}">
              <div class="card-body d-flex flex-column">
              <h5 class="card-title">${p.title}</h5>
              <p class="card-text text-muted small mb-2">${p.short}</p>
